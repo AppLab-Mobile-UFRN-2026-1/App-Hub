@@ -137,9 +137,12 @@ class MatrizFocoActivity : AppCompatActivity() {
             }
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(root) { _, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(root) { v, insets ->
             val d = resources.displayMetrics.density
-            navBarHeight = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
+            val sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            navBarHeight = sysBars.bottom
+            // Padding lateral para cobrir a barra de navegação em landscape
+            v.setPadding(sysBars.left, 0, sysBars.right, 0)
             val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
 
             if (inputBar.visibility == View.VISIBLE) {

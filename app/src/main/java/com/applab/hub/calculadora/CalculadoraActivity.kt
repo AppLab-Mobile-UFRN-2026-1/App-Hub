@@ -60,10 +60,10 @@ class CalculadoraActivity : AppCompatActivity() {
 
         rootConstraint  = findViewById(R.id.rootConstraint)
 
-        // Padding inferior para a barra de navegação
+        // Padding para a barra de navegação em todas as orientações
         ViewCompat.setOnApplyWindowInsetsListener(rootConstraint) { v, insets ->
-            val navBar = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
-            v.setPadding(0, 0, 0, navBar)
+            val sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(sysBars.left, 0, sysBars.right, sysBars.bottom)
             insets
         }
         tvDisplay       = findViewById(R.id.txtResultado)

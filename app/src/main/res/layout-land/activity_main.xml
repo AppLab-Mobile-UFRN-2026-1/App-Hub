@@ -12,6 +12,7 @@
 
     <!-- ── Coluna Esquerda: Cabeçalho ──────────────────────── -->
     <LinearLayout
+        android:id="@+id/header"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -34,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Sua central de ferramentas inteligentes.\nEscolha uma das opções abaixo para começar."
+            android:text="Sua central de ferramentas inteligentes.\nSelecione uma ferramenta para começar."
             android:textSize="13sp"
             android:textColor="@color/hub_on_surface_variant"
             android:lineSpacingExtra="3dp"
@@ -90,7 +91,7 @@
                         android:contentDescription="Basquete" />
                 </FrameLayout>
 
-                <!-- Título -->
+                <!-- Título: 2 linhas — referência de altura para os outros cards -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -100,7 +101,7 @@
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
 
-                <!-- Descrição -->
+                <!-- Descrição: 2 linhas — referência de altura para os outros cards -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -176,17 +177,18 @@
                         android:contentDescription="Calculadora" />
                 </FrameLayout>
 
-                <!-- Título -->
+                <!-- Título: 1 linha — minHeight equaliza com os 2 do Basquete -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="40dp"
                     android:text="Calculadora"
                     android:textSize="16sp"
                     android:textColor="@color/hub_primary"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
 
-                <!-- Descrição -->
+                <!-- Descrição: 2 linhas -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -261,7 +263,7 @@
                         android:contentDescription="Matriz de Foco Físico" />
                 </FrameLayout>
 
-                <!-- Título -->
+                <!-- Título: 2 linhas -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -271,11 +273,12 @@
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
 
-                <!-- Descrição -->
+                <!-- Descrição: 1 linha — minHeight equaliza com as 2 do Basquete -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:minHeight="28dp"
                     android:text="Gestão de treino"
                     android:textSize="12sp"
                     android:textColor="@color/hub_on_surface_variant"

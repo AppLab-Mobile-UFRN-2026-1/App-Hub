@@ -8,6 +8,12 @@ Um aplicativo Android nativo que funciona como **hub central** para os projetos 
 
 ---
 
+## 🎬 Demonstração
+
+> *(vídeo será adicionado após a gravação)*
+
+---
+
 ## ✨ Aplicativos Integrados
 
 ### 🏀 Partida de Basquete
