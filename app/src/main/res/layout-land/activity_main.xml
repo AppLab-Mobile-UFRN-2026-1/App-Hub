@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hub_surface"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    tools:context=".MainActivity">
+
+    <!-- ── Coluna Esquerda: Cabeçalho ──────────────────────── -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hub App Lab"
+            android:textSize="28sp"
+            android:textColor="@color/hub_primary"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sua central de ferramentas inteligentes.\nEscolha uma das opções abaixo para começar."
+            android:textSize="13sp"
+            android:textColor="@color/hub_on_surface_variant"
+            android:lineSpacingExtra="3dp"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+
+    <!-- ── Coluna Direita: Cards lado a lado ────────────────── -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- Card 1: Partida de Basquete -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBasquete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/hub_surface_container_lowest"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <!-- Ícone circular -->
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_icon_circle">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_basquete"
+                        android:contentDescription="Basquete" />
+                </FrameLayout>
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Partida de\nBasquete"
+                    android:textSize="16sp"
+                    android:textColor="@color/hub_primary"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Descrição -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Controle de pontuação"
+                    android:textSize="12sp"
+                    android:textColor="@color/hub_on_surface_variant"
+                    android:fontFamily="sans-serif" />
+
+                <!-- Link -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acessar"
+                        android:textSize="12sp"
+                        android:textColor="@color/hub_primary"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="2dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Acessar"
+                        app:tint="@color/hub_primary" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 2: Calculadora -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCalculadora"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/hub_surface_container_lowest"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <!-- Ícone circular -->
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_icon_circle">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_calculadora"
+                        android:contentDescription="Calculadora" />
+                </FrameLayout>
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculadora"
+                    android:textSize="16sp"
+                    android:textColor="@color/hub_primary"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Descrição -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Ferramenta de cálculos"
+                    android:textSize="12sp"
+                    android:textColor="@color/hub_on_surface_variant"
+                    android:fontFamily="sans-serif" />
+
+                <!-- Link -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acessar"
+                        android:textSize="12sp"
+                        android:textColor="@color/hub_primary"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="2dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Acessar"
+                        app:tint="@color/hub_primary" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 3: Matriz de Foco Físico -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMatriz"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/hub_surface_container_lowest"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <!-- Ícone circular -->
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_icon_circle">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_matriz"
+                        android:contentDescription="Matriz de Foco Físico" />
+                </FrameLayout>
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matriz de\nFoco Físico"
+                    android:textSize="16sp"
+                    android:textColor="@color/hub_primary"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Descrição -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Gestão de treino"
+                    android:textSize="12sp"
+                    android:textColor="@color/hub_on_surface_variant"
+                    android:fontFamily="sans-serif" />
+
+                <!-- Link -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acessar"
+                        android:textSize="12sp"
+                        android:textColor="@color/hub_primary"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="2dp"
+                        android:src="@drawable/ic_chevron_right"
+                        android:contentDescription="Acessar"
+                        app:tint="@color/hub_primary" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</LinearLayout>
