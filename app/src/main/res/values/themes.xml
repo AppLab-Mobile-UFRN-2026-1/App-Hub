@@ -2,8 +2,12 @@
 <resources>
     <!-- Hub principal (sem ActionBar) -->
     <style name="Theme.HubAppLab" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:statusBarColor">#FFFFFF</item>
-        <item name="android:windowBackground">#F5F5F5</item>
+        <item name="android:statusBarColor">@color/hub_surface</item>
+        <item name="android:windowBackground">@color/hub_surface</item>
+        <item name="android:navigationBarColor">@color/hub_surface</item>
+        <item name="colorPrimary">@color/hub_primary</item>
+        <item name="colorPrimaryDark">@color/hub_primary_container</item>
+        <item name="colorAccent">@color/hub_secondary</item>
     </style>
 
     <!-- Sub-apps com ActionBar para o botão de voltar -->

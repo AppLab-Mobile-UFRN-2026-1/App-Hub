@@ -3,6 +3,30 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- ═══ Hub Design System ═══════════════════════════════ -->
+    <!-- Palette baseada no design "The Architectural Curator" -->
+    <color name="hub_primary">#001E40</color>
+    <color name="hub_primary_container">#003366</color>
+    <color name="hub_on_primary">#FFFFFF</color>
+    <color name="hub_on_primary_container">#799DD6</color>
+
+    <color name="hub_secondary">#00658D</color>
+    <color name="hub_secondary_container">#41BEFD</color>
+    <color name="hub_secondary_fixed">#C6E7FF</color>
+    <color name="hub_on_secondary_fixed_variant">#004C6B</color>
+
+    <color name="hub_surface">#F7F9FB</color>
+    <color name="hub_surface_container_low">#F2F4F6</color>
+    <color name="hub_surface_container">#ECEEF0</color>
+    <color name="hub_surface_container_high">#E6E8EA</color>
+    <color name="hub_surface_container_highest">#E0E3E5</color>
+    <color name="hub_surface_container_lowest">#FFFFFF</color>
+
+    <color name="hub_on_surface">#191C1E</color>
+    <color name="hub_on_surface_variant">#43474F</color>
+    <color name="hub_outline">#737780</color>
+    <color name="hub_outline_variant">#C3C6D1</color>
+
     <!-- Calculadora -->
     <color name="colorBackground">#000000</color>
     <color name="colorButtonNumber">#333333</color>
