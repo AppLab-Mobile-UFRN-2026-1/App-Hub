@@ -10,7 +10,9 @@ Um aplicativo Android nativo que funciona como **hub central** para os projetos 
 
 ## 🎬 Demonstração
 
-> *(vídeo será adicionado após a gravação)*
+
+https://github.com/user-attachments/assets/0783e65c-8a42-4ceb-be2f-6b3375c8789e
+
 
 ---
 
