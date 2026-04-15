@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474F"
+    tools:context=".basquete.BasqueteActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_basquete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="#37474F" />
+
+    <!-- Botão de reiniciar fixo no rodapé -->
+    <Button
+        android:id="@+id/reiniciarPartida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar Partida"
+        android:backgroundTint="#F57C00"
+        android:background="@drawable/basquete_custom_button"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Conteúdo principal em horizontal: [Botões A] [Placar + Cronômetro] [Botões B] -->
+    <LinearLayout
+        android:id="@+id/conteudoPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_basquete"
+        android:layout_above="@id/reiniciarPartida"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Coluna TIME A -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingEnd="6dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TIME A"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:background="#1976D2"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/tresPontosA"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp"
+                android:backgroundTint="#1976D2"
+                android:background="@drawable/basquete_custom_button"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="+3 PONTOS" />
+
+            <Button
+                android:id="@+id/doisPontosA"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp"
+                android:backgroundTint="#1976D2"
+                android:background="@drawable/basquete_custom_button"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="+2 PONTOS" />
+
+            <Button
+                android:id="@+id/tiroLivreA"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1976D2"
+                android:background="@drawable/basquete_custom_button"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="TIRO LIVRE" />
+
+        </LinearLayout>
+
+        <!-- Coluna central: Placar + Cronômetro -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/basquete_placar"
+                android:padding="0dp">
+
+                <!-- Nomes dos times -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TIME A"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:padding="8dp"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#B0BEC5"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="TIME B"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:padding="8dp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#B0BEC5"/>
+
+                <!-- Placar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/placarTimeA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="#FF0000"
+                        android:textSize="52sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="#FFFFFF"
+                        android:textSize="40sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:id="@+id/placarTimeB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="#FF0000"
+                        android:textSize="52sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#B0BEC5" />
+
+                <!-- Cronômetro -->
+                <TextView
+                    android:id="@+id/cronometro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="#FF0000"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:background="@drawable/basquete_ripple_cronometro"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Coluna TIME B -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="6dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TIME B"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:background="#D32F2F"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/tresPontosB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp"
+                android:backgroundTint="#D32F2F"
+                android:background="@drawable/basquete_custom_button"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="+3 PONTOS" />
+
+            <Button
+                android:id="@+id/doisPontosB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="6dp"
+                android:backgroundTint="#D32F2F"
+                android:background="@drawable/basquete_custom_button"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="+2 PONTOS" />
+
+            <Button
+                android:id="@+id/tiroLivreB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#D32F2F"
+                android:background="@drawable/basquete_custom_button"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="TIRO LIVRE" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
