@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hub principal (sem ActionBar) -->
+    <style name="Theme.HubAppLab" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowBackground">#F5F5F5</item>
+    </style>
+
+    <!-- Sub-apps com ActionBar para o botão de voltar -->
+    <style name="Theme.HubAppLab.WithActionBar" parent="Theme.MaterialComponents.Light">
+        <item name="android:statusBarColor">#FFFFFF</item>
+    </style>
+
+    <!-- Basquete: AppCompat para preservar cores dos botões sem interferência do MaterialButton -->
+    <style name="Theme.HubAppLab.Basquete" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+    </style>
+
+    <!-- Calculadora -->
+    <style name="Theme.HubAppLab.Calculadora" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+    </style>
+
+    <style name="CalcButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:backgroundTint">@null</item>
+    </style>
+
+    <style name="HistoryBottomSheet" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HubAppLab">
+
+        <!-- Hub (entrada do app) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HubAppLab">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Partida de Basquete -->
+        <activity
+            android:name=".basquete.BasqueteActivity"
+            android:label="Partida de Basquete"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.HubAppLab.Basquete" />
+
+        <!-- Calculadora -->
+        <activity
+            android:name=".calculadora.CalculadoraActivity"
+            android:label="Calculadora"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.HubAppLab.Calculadora" />
+
+        <!-- Matriz de Foco Físico -->
+        <activity
+            android:name=".matrizfoco.MatrizFocoActivity"
+            android:label="Matriz de Foco Físico"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.HubAppLab" />
+
+    </application>
+
+</manifest>

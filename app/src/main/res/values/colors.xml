@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Calculadora -->
+    <color name="colorBackground">#000000</color>
+    <color name="colorButtonNumber">#333333</color>
+    <color name="colorButtonAction">#A5A5A5</color>
+    <color name="colorButtonOperator">#FF9500</color>
+    <color name="colorButtonScientific">#2D2D2D</color>
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextOnAction">#000000</color>
+    <color name="colorTextScientific">#FF9500</color>
+    <color name="colorStatusBar">#000000</color>
+</resources>
