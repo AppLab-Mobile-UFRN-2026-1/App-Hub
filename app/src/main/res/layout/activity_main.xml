@@ -281,7 +281,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Gestão de treino"
+                        android:text="Organizador de tarefas"
                         android:textSize="14sp"
                         android:textColor="@color/hub_on_surface_variant"
                         android:fontFamily="sans-serif" />
